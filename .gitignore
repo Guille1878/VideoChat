@@ -3,3 +3,11 @@
 ################################################################################
 
 /.vs/VideoChat/v16
+/.vs
+/VideoChat/.vs/VideoChat
+/VideoChat/ChatHub/bin/Debug/netcoreapp3.1
+/VideoChat/ChatHub/obj
+/VideoChat/VideoReceiverClientApp/bin
+/VideoChat/VideoReceiverClientApp/obj
+/VideoChat/VideoSenderClientApp/bin
+/VideoChat/VideoSenderClientApp/obj

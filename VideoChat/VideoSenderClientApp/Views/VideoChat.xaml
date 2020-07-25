@@ -1,0 +1,40 @@
+﻿<UserControl
+    x:Class="VideoSenderClientApp.Views.VideoChat"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VideoSenderClientApp.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="MainGrid" Loaded="MainGrid_Loaded">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <AppBarToggleButton x:Name="SwitchCamera" Click="SwitchCamera_Click" Content="WebCam" IsChecked="True"  >
+                <AppBarToggleButton.Icon>
+                    <SymbolIcon Symbol="WebCam"/>
+                </AppBarToggleButton.Icon>
+            </AppBarToggleButton>
+            <AppBarButton x:Name="ScreenShot" Click="ScreenShot_Click" Content="Screenshot" >
+                <AppBarButton.Icon>
+                    <SymbolIcon Symbol="Camera" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarToggleButton x:Name="RecordVideo" Click="RecordVideo_Click" Content="Record" >
+                <AppBarToggleButton.Icon>
+                    <SymbolIcon Symbol="Video" />
+                </AppBarToggleButton.Icon>
+            </AppBarToggleButton>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <!--<MediaElement x:Name="LiveMedia" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />-->
+            <!--<CaptureElement Name="OwnCamera" Margin="10" Stretch="Uniform" HorizontalAlignment="Right" Width="100" Height="100" VerticalAlignment="Top"/>-->
+            <CaptureElement Name="OwnCamera" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  IgnorableNamespaces="uap mp uap6 uap3">
+
+  <Identity
+    Name="d5269ce6-6960-47a0-b263-1802ace4fdda"
+    Publisher="CN=guill"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="d5269ce6-6960-47a0-b263-1802ace4fdda" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>VideoSenderClientApp</DisplayName>
+    <PublisherDisplayName>guill</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="VideoSenderClientApp.App">
+      <uap:VisualElements
+        DisplayName="VideoSenderClientApp"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="App only sending video but chating text"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.cameraSettings"/>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer"/>
+    <uap:Capability Name="videosLibrary"/>
+    <uap6:Capability Name="graphicsCapture"/>
+    <uap:Capability Name="picturesLibrary"/>
+    <uap3:Capability Name="backgroundMediaPlayback"/>
+    <DeviceCapability Name="webcam"/>
+    <DeviceCapability Name="microphone"/>
+    <DeviceCapability Name="backgroundMediaRecording" />
+  </Capabilities>
+</Package>
